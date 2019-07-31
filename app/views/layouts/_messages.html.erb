@@ -4,17 +4,17 @@
     <div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Hydra Logo" width="95" height="70" /></a></div>
 -->
     <div class="company-name">
-      <a href="#">
+      <%= link_to static_pages_inicio_path do %>
         <img src="/images/logo.svg" alt="Hydra Logo" width="95" height="70" />
-      </a>
+      <% end %>
     </div>
     <nav>
       <a class="nav-toggle" id="open-nav" href="#">&#9776;</a>
     	<a class="editor-link btn" href="cloudcannon:collections/_data/navigation.yml" class="btn"><strong>&#9998;</strong> Edit navigation</a>
-      <a href="#" class="" target="_blank">Cursos</a>
-      <a href="#" class="" target="_blank">Tarifas</a>
-      <a href="#" class="" target="_blank">Contacto</a>
-      <a href="#" class="" target="_blank">Nosotros</a>
+      <%= link_to 'Cursos',  static_pages_cursos_path %>
+      <%= link_to 'Tarifas', static_pages_tarifas_path %>
+      <%= link_to 'Contacto', static_pages_contacto_path %>
+      <%= link_to 'Nosotros', static_pages_nosotros_path %>
     </nav>
   </div>
 </header>
