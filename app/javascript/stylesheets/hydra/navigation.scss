@@ -74,7 +74,9 @@ nav {
 
 			&:hover {
 				background: #fff;
-				color: $brand-color;
+        //color: $brand-color;
+        //color: $nav-color;
+        color: #FF0000;
 			}
 		}
 	}
