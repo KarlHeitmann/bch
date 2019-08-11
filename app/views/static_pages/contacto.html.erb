@@ -1,2 +1,31 @@
-<h1>StaticPages#contacto</h1>
-<p>Find me in app/views/static_pages/contacto.html.erb</p>
+<div class="content">
+  <section class="page">
+    <div class="contact-box">
+      <form action="/contact-success/" method="post" class="contact-form">
+        <input type="hidden" name="_to" value="support@example.com" />
+        <input type="text" name="_gotcha" style="display: none;">
+
+        <label for="name">Nombre completo</label>
+        <input type="text" name="name" id="name" placeholder="Ingresa tu nombre..." />
+
+        <label for="email">Dirección de email</label>
+        <input type="email" name="email" id="email" placeholder="Ingresa tu email..." required />
+
+        <label for="message">Contenido</label>
+        <textarea name="message" id="message" placeholder="Ingresa tu mensaje"></textarea>
+
+        <input type="submit" value="Send Message" />
+      </form>
+
+      <div class="contact-details">
+        <h3 class="editable">Address</h3>
+        <!--<address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>-->
+        <address><a target="_blank" href="#">Canelillo, Chile</a></address>
+
+        <h3 class="editable">Email</h3>
+        <p><a href="mailto:support@example.com">support@example.com</a></p>
+      </div>
+    </div>
+  </section>
+
+</div>

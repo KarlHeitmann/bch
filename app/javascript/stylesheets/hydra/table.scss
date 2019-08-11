@@ -1,5 +1,6 @@
 table.blueTable {
-  border: 1px solid #1C6EA4;
+  //border: 1px solid #1C6EA4;
+  border: 1px solid $brand-color;
   background-color: #EEEEEE;
   width: 100%;
   text-align: left;
@@ -16,10 +17,14 @@ table.blueTable tr:nth-child(even) {
   background: #D0E4F5;
 }
 table.blueTable thead {
-  background: #1C6EA4;
-  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
-  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  //background: #1C6EA4;
+  background: $brand-color;
+  //background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  //background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  //background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, $brand-color 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, $brand-color 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, $brand-color 100%);
   border-bottom: 2px solid #444444;
 }
 table.blueTable thead th {
@@ -50,7 +55,8 @@ table.blueTable tfoot .links {
 }
 table.blueTable tfoot .links a{
   display: inline-block;
-  background: #1C6EA4;
+  //background: #1C6EA4;
+  background: $brand-color;
   color: #FFFFFF;
   padding: 2px 8px;
   border-radius: 5px;
