@@ -1,16 +1,4 @@
-@import "hydra/mixins/flexbox";
-@import "hydra/mixins/columns";
-@import "hydra/variables";
-@import "hydra/elements";
-@import "hydra/landing-page";
-@import "hydra/layout";
-@import "hydra/pricing";
-@import "hydra/staff";
-@import "hydra/contact";
-@import "hydra/blog";
-@import "hydra/forms";
-@import "hydra/navigation";
-@import "hydra/footer";
-@import "hydra/cloudcannon";
+// @import "bootstrap";
+// @import "~bootstrap"
 
-@import "hydra/table";
+@import 'bootstrap/dist/css/bootstrap.min.css';
