@@ -1,0 +1,21 @@
+.content
+  %section.page
+    .contact-box
+      %form.contact-form{:action => "/contact-success/", :method => "post"}
+        %input{:name => "_to", :type => "hidden", :value => "support@example.com"}/
+        %input{:name => "_gotcha", :style => "display: none;", :type => "text"}/
+        %label{:for => "name"} Nombre completo
+        %input#name{:name => "name", :placeholder => "Ingresa tu nombre...", :type => "text"}/
+        %label{:for => "email"} Dirección de email
+        %input#email{:name => "email", :placeholder => "Ingresa tu email...", :required => "", :type => "email"}/
+        %label{:for => "message"} Contenido
+        %textarea#message{:name => "message", :placeholder => "Ingresa tu mensaje"}
+        %input{:type => "submit", :value => "Send Message"}/
+      .contact-details
+        %h3.editable Address
+        / <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+        %address
+          %a{:href => "#", :target => "_blank"} Canelillo, Chile
+        %h3.editable Email
+        %p
+          %a{:href => "mailto:support@example.com"} support@example.com
