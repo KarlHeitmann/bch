@@ -1,27 +1,37 @@
-%body
-  %header
-    %nav.navbar.navbar-expand-lg.navbar-light.bg-light
-      = link_to "Navbar", "#", class: "navbar-brand"
-      %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
-        %span.navbar-toggler-icon
-      #navbarSupportedContent.collapse.navbar-collapse
-        %ul.navbar-van.mr-auto
-          %li.nav-item.active
-            = link_to '#', class: "nav-link" do
-              Home
-              %span.sr-only
-    .container
-      /
-        <div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Hydra Logo" width="95" height="70" /></a></div>
-      .company-name
-        = link_to static_pages_inicio_path do
-          %img{:alt => "Hydra Logo", :height => "70", :src => "/images/logo.svg", :width => "95"}/
-      %nav
-        %a#open-nav.nav-toggle{:href => "#"} ☰
-        %a.editor-link.btn{:href => "cloudcannon:collections/_data/navigation.yml"}
-          %strong ✎
-          Edit navigation
-        = link_to 'Cursos',  static_pages_cursos_path
-        = link_to 'Tarifas', static_pages_tarifas_path
-        = link_to 'Contacto', static_pages_contacto_path
-        = link_to 'Nosotros', static_pages_nosotros_path
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  = link_to "Navbar", "#", class: "navbar-brand"
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.active
+        = link_to static_pages_cursos_path, class: "nav-link" do
+          Cursos
+          %span.sr-only
+      %li.nav-item
+        = link_to static_pages_tarifas_path, class: "nav-link" do
+          Tarifas
+          %span.sr-only
+      %li.nav-item
+        = link_to static_pages_contacto_path, class: "nav-link" do
+          Tarifas
+          %span.sr-only
+      %li.nav-item
+        = link_to static_pages_nosotros_path, class: "nav-link" do
+          Tarifas
+          %span.sr-only
+.container
+  /
+    <div class="company-name"><a href="{{ site.baseurl }}/"><img src="{{ site.baseurl }}/images/logo.svg" alt="Hydra Logo" width="95" height="70" /></a></div>
+  .company-name
+    = link_to static_pages_inicio_path do
+      %img{:alt => "Hydra Logo", :height => "70", :src => "/images/logo.svg", :width => "95"}/
+  %nav
+    %a#open-nav.nav-toggle{:href => "#"} ☰
+    %a.editor-link.btn{:href => "cloudcannon:collections/_data/navigation.yml"}
+      %strong ✎
+      Edit navigation
+    = link_to 'Cursos',  static_pages_cursos_path
+    = link_to 'Tarifas', static_pages_tarifas_path
+    = link_to 'Contacto', static_pages_contacto_path
+    = link_to 'Nosotros', static_pages_nosotros_path
