@@ -10,15 +10,6 @@ require("channels");
 
 import 'stylesheets/application';
 
-const webpack = require('webpack')
-environment.plugins.prepend('Provide',
-  new webpack.ProvidePlugin({
-    $: 'jquery/src/jquery',
-    jQuery: 'jquery/src/jquery',
-    Popper: ['popper.js', 'default']
-  })
-)
-
 import 'bootstrap';
 
 // Uncomment to copy all static images under ../images to the output folder and reference
