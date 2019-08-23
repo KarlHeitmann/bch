@@ -2,3 +2,8 @@
 // @import "~bootstrap"
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
+
+.ml-auto .dropdown-menu {
+  left: auto !important;
+  right: 0px;
+}
