@@ -1,84 +1,73 @@
-.content
-  %section.page
-    .container
-      %h2 Tarifas
-      %p.subtext Abajo encontrarás las tarifas de todos nuestros cursos
-      .plans
-        %ul.plan
-          %li{:style => "background: #8e8e8e"}
-            %h3 PADI
-          %li.highlighted 20 USD
-          %li 2 meses
-          %li bla bla bla
-          %li ble ble ble
-          %li bli bli bli
-          %li blo blo blo
-          %li blu blu blu
-        %ul.plan
-          %li{:style => "background: #4a4a4a"}
-            %h3 ADVANCED PADI
-          %li.highlighted 20 USD
-          %li 2 meses
-          %li bla bla bla
-          %li ble ble ble
-          %li bli bli bli
-          %li blo blo blo
-          %li blu blu blu
-        %ul.plan
-          %li{:style => "background: #000000"}
-            %h3 PROFESSIONAL PADI
-          %li.highlighted 20 USD
-          %li 2 meses
-          %li bla bla bla
-          %li ble ble ble
-          %li bli bli bli
-          %li blo blo blo
-          %li blu blu blu
-  %section
-    .container.flex
-      .text.editable
-        %h2 Padi Open Water Diver
-        %p
-          Como PADI Open Water Diver certificado, la clasificación más ampliamente
-          reconocida y respetada en el mundo, el alumno tiene la libertad de
-          bucear con un compañero, independiente de un profesional. Si ya han
-          probado una experiencia PADI Discover Scuba Diving o tienen un PADI
-          Scuba Diver certificado, verifiquen son su instructor cómo se pueden
-          acreditar estos cursos para el programa de aguas abiertas.
-        %p
-          Prácticamente cualquier persona que tenga buena salud, y que se sienta
-          cómoda en el agua puede obtener su certificación PADI Open Water Diver.
-          Si tiene entre 10 y 14 años tenemos disponible el programa PADI Junior
-          Open Water Diver.
+.container
+  .row
+    .col-12.col-lg-4
+      .card
+        .card-header{:style => "background: #8e8e8e"}
+          %h2.title PADI
+        .card-body
+          %ul.list-group.list-group-flush
+            %li.list-group-item bla bla bla bla bla bla
+            %li.list-group-item bla bla bla bla bla bla
+            %li.list-group-item bla bla bla bla bla bla
+            %li.list-group-item bla bla bla bla bla bla
+    .col-12.col-lg-4
+      .card
+        .card-header{:style => "background: #8e8e8e"}
+          %h2.title ADVANCED PADI
+        .card-body
+          %ul.list-group.list-group-flush
+            %li.list-group-item ble ble ble ble ble ble
+            %li.list-group-item ble ble ble ble ble ble
+            %li.list-group-item ble ble ble ble ble ble
+            %li.list-group-item ble ble ble ble ble ble
+    .col-12.col-lg-4
+      .card
+        .card-header{:style => "background: #8e8e8e"}
+          %h2.title PROFESSIONAL PADI
+        .card-body
+          %ul.list-group.list-group-flush
+            %li.list-group-item bli bli bli bli bli bli
+            %li.list-group-item bli bli bli bli bli bli
+            %li.list-group-item bli bli bli bli bli bli
+            %li.list-group-item bli bli bli bli bli bli
+  %br
+  %br
+  %br
+  .row
+    .col-12.col-lg-6
+      %h2 Padi Open Water Diver
+      %p
+        Como PADI Open Water Diver certificado, la clasificación más ampliamente
+        reconocida y respetada en el mundo, el alumno tiene la libertad de
+        bucear con un compañero, independiente de un profesional. Si ya han
+        probado una experiencia PADI Discover Scuba Diving o tienen un PADI
+        Scuba Diver certificado, verifiquen son su instructor cómo se pueden
+        acreditar estos cursos para el programa de aguas abiertas.
+      %p
+        Prácticamente cualquier persona que tenga buena salud, y que se sienta
+        cómoda en el agua puede obtener su certificación PADI Open Water Diver.
+        Si tiene entre 10 y 14 años tenemos disponible el programa PADI Junior
+        Open Water Diver.
       .image
-        %img.editable{:alt => "Buceando", :src => "/images/dive-diver-eyes-37545.jpg"}/
-  %section
-    .container.flex
-      .text.editable
-        %h2 Padi Advanced Open Water Diver
-        %p
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-          doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
-          veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
-          enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-          sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
-          nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-          consectetur, adipisci velit, sed quia non numquam eius modi tempora
-          incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
-          ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
-          laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
-          eum iure reprehenderit qui in ea voluptate velit esse quam nihil
-          molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
-          nulla pariatur?
+        %img.img-fluid{:alt => "Buceando", :src => "/images/dive-diver-eyes-37545.jpg"}/
+    .col-12.col-lg-6
+      %h2 Padi Advanced Open Water Diver
+      %p
+        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
+        veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
+        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+        sed quia consequuntur magni dolores eos qui ratione voluptatem sequi
+        nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+        consectetur, adipisci velit, sed quia non numquam eius modi tempora
+        incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim
+        ad minima veniam, quis nostrum exercitationem ullam corporis suscipit
+        laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel
+        eum iure reprehenderit qui in ea voluptate velit esse quam nihil
+        molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas
+        nulla pariatur?
       .image
-        %img.editable{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
-  /
-    <section>
-    <div class="container flex">
-    <h1>Pronóstico para bucear</h1>
-    <script src="https://widget.windguru.cz/js/wg_widget.php" type="text/javascript"></script>
-    </div>
-    </section>
+        %img.img-fluid{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
   %section.bottom-cta
     %h2.editable
       %strong Improve
