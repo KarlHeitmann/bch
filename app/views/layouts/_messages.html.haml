@@ -5,19 +5,8 @@
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     %ul.navbar-nav.ml-auto
-      %li.nav-item.active
-        = link_to static_pages_cursos_path, class: "nav-link" do
-          Cursos
-          %span.sr-only
-      %li.nav-item
-        = link_to static_pages_tarifas_path, class: "nav-link" do
-          Tarifas
-          %span.sr-only
-      %li.nav-item
-        = link_to static_pages_contacto_path, class: "nav-link" do
-          Contacto
-          %span.sr-only
-      %li.nav-item.float-right
-        = link_to static_pages_nosotros_path, class: "nav-link" do
-          Nosotros
-          %span.sr-only
+      - @navegacion.each do |navegacion|
+        %li{ class: "nav-item #{navegacion[:estado]}"}
+          = link_to navegacion[:direccion], class: "nav-link" do
+            = navegacion[:caption]
+            %span.sr-only
