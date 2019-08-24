@@ -2,9 +2,19 @@
 // @import "~bootstrap"
 
 @import 'bootstrap/dist/css/bootstrap.min.css';
-@import 'MDBFree/scss/mdb.scss';
+// @import 'MDBFree/scss/mdb.scss';
 
 .ml-auto .dropdown-menu {
   left: auto !important;
   right: 0px;
+}
+
+body {
+  font-size: 1.5em;
+  font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
+
+}
+
+.title {
+  font-size: 1.5em;
 }
