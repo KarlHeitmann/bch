@@ -13,6 +13,20 @@ class StaticPagesController < ApplicationController
 
   def contacto
     @navegacion[2][:estado] = "active"
+    @contact = Contact.new
+  end
+
+  def contacto_create
+    @contact = Contact.new(params[:contact])
+    @contact.request = request
+    if @contact.deliver
+      flash.now[:error] = nil
+      flash.now[:notice] = 'Thank you for your message!'
+      render :contacto
+    else
+      flash.now[:error] = 'Cannot send message.'
+      render :contacto
+    end
   end
 
   def nosotros

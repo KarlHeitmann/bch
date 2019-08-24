@@ -1,21 +1,20 @@
-.content
-  %section.page
-    .contact-box
-      %form.contact-form{:action => "/contact-success/", :method => "post"}
-        %input{:name => "_to", :type => "hidden", :value => "support@example.com"}/
-        %input{:name => "_gotcha", :style => "display: none;", :type => "text"}/
-        %label{:for => "name"} Nombre completo
-        %input#name{:name => "name", :placeholder => "Ingresa tu nombre...", :type => "text"}/
-        %label{:for => "email"} Dirección de email
-        %input#email{:name => "email", :placeholder => "Ingresa tu email...", :required => "", :type => "email"}/
-        %label{:for => "message"} Contenido
-        %textarea#message{:name => "message", :placeholder => "Ingresa tu mensaje"}
-        %input{:type => "submit", :value => "Send Message"}/
-      .contact-details
-        %h3.editable Address
-        / <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
-        %address
-          %a{:href => "#", :target => "_blank"} Canelillo, Chile
-        %h3.editable Email
-        %p
-          %a{:href => "mailto:support@example.com"} support@example.com
+.container
+  .row
+    .col-12.col-lg-6
+      %h1.title Contacto
+      = simple_form_for(@contact, url: static_pages_contacto_create_path) do |f|
+        = f.input :name, label: 'Nombre', input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' }, :required => true
+        = f.input :email, label: 'Correo', input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' }, required: true
+        = f.input :message, label: 'Mensaje', input_html: {class: "form-control", rows: 10}, wrapper_html: { class: 'form-group' }, :as => :text, :required => false
+        .hidden
+          = f.hidden_field :nickname, :hint => 'Leave this field blank!'
+        .form-actions
+          = f.button :submit, 'Enviar'
+    .col-12.col-lg-6
+      %h3.editable Address
+      / <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+      %address
+        %a{:href => "#", :target => "_blank"} Canelillo, Chile
+      %h3.editable Email
+      %p
+        %a{:href => "mailto:support@example.com"} support@example.com
