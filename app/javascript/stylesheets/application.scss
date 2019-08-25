@@ -15,6 +15,20 @@ body {
 
 }
 
+.anchor { padding-top: 90px; }
+
+a.panel-curso {
+    text-decoration: none;
+}
+a.panel-curso:link, a.panel-curso:visited {
+    //color: blue;
+    color: black;
+}
+a.panel-curso:hover {
+    //color: red;
+    color: black;
+}
+
 .title {
   font-size: 1.5em;
 }

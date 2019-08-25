@@ -3,7 +3,8 @@
     .col-12.col-lg-4
       .card
         .card-header{:style => "background: #8e8e8e"}
-          %h2.title PADI
+          = link_to '#Padi', class: "panel-curso" do
+            %h2.title PADI
         .card-body
           %ul.list-group.list-group-flush
             %li.list-group-item bla bla bla bla bla bla
@@ -30,12 +31,9 @@
             %li.list-group-item bli bli bli bli bli bli
             %li.list-group-item bli bli bli bli bli bli
             %li.list-group-item bli bli bli bli bli bli
-  %br
-  %br
-  %br
   .row
     .col-12.col-lg-6
-      %h2 Padi Open Water Diver
+      %h2#Padi.anchor Padi Open Water Diver
       %p
         Como PADI Open Water Diver certificado, la clasificación más ampliamente
         reconocida y respetada en el mundo, el alumno tiene la libertad de
@@ -51,7 +49,7 @@
       .image
         %img.img-fluid{:alt => "Buceando", :src => "/images/dive-diver-eyes-37545.jpg"}/
     .col-12.col-lg-6
-      %h2 Padi Advanced Open Water Diver
+      %h2.anchor Padi Advanced Open Water Diver
       %p
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
         doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore
