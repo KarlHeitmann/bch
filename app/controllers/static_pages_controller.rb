@@ -17,6 +17,10 @@ class StaticPagesController < ApplicationController
   end
 
   def contacto_create
+    UserMailer.contact(params[:contact]).deliver_now
+    @contact = Contact.new(params[:contact])
+    render :contacto
+=begin
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
@@ -26,6 +30,7 @@ class StaticPagesController < ApplicationController
       flash.now[:error] = 'Momentáneamente no podemos atenderle. Puede ponerse en contacto escribiendo al siguiente correo: contacto@buceocanelillo.com'
       render :contacto
     end
+=end
   end
 
   def nosotros
