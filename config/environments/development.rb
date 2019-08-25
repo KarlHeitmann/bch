@@ -43,12 +43,12 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false #SUGERIDO EN MIGRACION rails 5.0.0 -> 5.0.6
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   config.action_mailer.smtp_settings = {
-    address:            "smtp.webfaction.com",
+    address:            "smtp.gmail.com",
     port:               587,
-    domain:             "domain.of.sender.net",
+    domain:             "example.com",
     authentication:     "plain",
-    user_name:          "academicesl_kheitmann",
-    password:           "acaheitmann",
+    user_name:          "buceo-canelilloadm",
+    password:           "TangataManu",
     enable_starttls_auto: true
   }
 
