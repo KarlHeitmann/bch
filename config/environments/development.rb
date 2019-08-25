@@ -32,10 +32,31 @@ Rails.application.configure do
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = false
+  #config.action_mailer.perform_caching = false
 
-  config.action_mailer.perform_caching = false
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.delivery_method = :smtp
+
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.raise_delivery_errors = false #SUGERIDO EN MIGRACION rails 5.0.0 -> 5.0.6
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+=begin
+  config.action_mailer.smtp_settings = {
+    address:            "smtp.gmail.com",
+    port:               587,
+    domain:             "gmail.com",
+    authentication:     "plain",
+    user_name:          "buceo.canelilloadm@gmail.com",
+    password:           "TangataManu",
+    enable_starttls_auto: true
+  }
+=end
+
+  # config.action_mailer.perform_caching = false #SUGERIDO EN MIGRACION rails 5.0.0 -> 5.0.6
+
+
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
