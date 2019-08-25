@@ -42,6 +42,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
   # config.action_mailer.raise_delivery_errors = false #SUGERIDO EN MIGRACION rails 5.0.0 -> 5.0.6
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+=begin
   config.action_mailer.smtp_settings = {
     address:            "smtp.gmail.com",
     port:               587,
@@ -51,6 +52,7 @@ Rails.application.configure do
     password:           "TangataManu",
     enable_starttls_auto: true
   }
+=end
 
   # config.action_mailer.perform_caching = false #SUGERIDO EN MIGRACION rails 5.0.0 -> 5.0.6
 
