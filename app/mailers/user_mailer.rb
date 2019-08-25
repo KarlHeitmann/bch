@@ -10,6 +10,6 @@ class UserMailer < ApplicationMailer
     puts datos
     puts datos[:email]
 
-    mail to: datos[:email], subject: "Contacto"
+    mail to: 'buceo.canelilloadm@gmail.com', subject: "Contacto buceo canelillo"
   end
 end
