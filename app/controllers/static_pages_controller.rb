@@ -20,11 +20,10 @@ class StaticPagesController < ApplicationController
     @contact = Contact.new(params[:contact])
     @contact.request = request
     if @contact.deliver
-      flash.now[:error] = nil
-      flash.now[:notice] = 'Thank you for your message!'
+      flash.now[:success] = 'Hemos enviado el correo, en breve te contactaremos.'
       render :contacto
     else
-      flash.now[:error] = 'Cannot send message.'
+      flash.now[:error] = 'Momentáneamente no podemos atenderle. Puede ponerse en contacto escribiendo al siguiente correo: contacto@buceocanelillo.com'
       render :contacto
     end
   end

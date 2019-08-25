@@ -2,6 +2,16 @@
 %html
   %head
     %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    / Global site tag (gtag.js) - Google Analytics
+    %script{:async => "", :src => "https://www.googletagmanager.com/gtag/js?id=UA-146427842-1"}
+    :javascript
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-146427842-1');
+    %meta{"http-equiv": "X-UA-Compatible", content: "IE=edge"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
     %title Buceocanelillo
     = csrf_meta_tags
     = csp_meta_tag
@@ -9,8 +19,9 @@
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render partial: '/layouts/messages'
+    = render partial: '/layouts/alerts'
     = yield
 
     %footer.footer.mt-auto.py-3
       .container
-        %span.text-muted Place sticky footer content here.
+        %span.text-muted Footer
