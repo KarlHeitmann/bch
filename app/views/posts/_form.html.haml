@@ -1,4 +1,4 @@
-= form_for @post do |f|
+= simple_form_for @post do |f|
   - if @post.errors.any?
     #error_explanation
       %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
@@ -6,11 +6,7 @@
         - @post.errors.full_messages.each do |message|
           %li= message
 
-  .field
-    = f.label :contenido
-    = f.text_area :contenido
-  .field
-    = f.label :titulo
-    = f.text_field :titulo
+  = f.input :titulo, label: 'Título', input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' }, :required => true, placeholder: "Aquí va el título..."
+  = f.input :contenido, label: 'Contenido', input_html: {class: "form-control", rows: 10}, wrapper_html: { class: 'form-group' }, :required => true, placeholder: "Aquí va el contenido..."
   .actions
-    = f.submit 'Save'
+    = f.submit 'Guardar', class: 'btn btn-primary'

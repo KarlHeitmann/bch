@@ -1,7 +1,10 @@
-%h1 Editing post
+.container
+  .row
+    .col
+      %h1 Editando noticia
 
-= render 'form'
+      = render 'form'
 
-= link_to 'Show', @post
-\|
-= link_to 'Back', posts_path
+      = link_to 'Ver', @post
+      \|
+      = link_to 'Volver', posts_path
