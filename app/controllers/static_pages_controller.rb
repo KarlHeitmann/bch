@@ -3,17 +3,25 @@ class StaticPagesController < ApplicationController
   def inicio
   end
 
-  def cursos
+  def noticias
     @navegacion[0][:estado] = "active"
   end
 
-  def tarifas
+  def cursos
     @navegacion[1][:estado] = "active"
   end
 
-  def contacto
+  def tarifas
     @navegacion[2][:estado] = "active"
+  end
+
+  def contacto
+    @navegacion[3][:estado] = "active"
     @contact = Contact.new
+  end
+
+  def nosotros
+    @navegacion[4][:estado] = "active"
   end
 
   def contacto_create
@@ -33,34 +41,42 @@ class StaticPagesController < ApplicationController
 =end
   end
 
-  def nosotros
-    @navegacion[3][:estado] = "active"
-  end
-
   private
 
     def set_navigation_bar
       @navegacion = [
-      {
-        direccion: static_pages_cursos_path,
-        caption: "Cursos",
-        estado: ""
-      },
-      {
-        direccion: static_pages_tarifas_path,
-        caption: "Tarifas",
-        estado: ""
-      },
-      {
-        direccion: static_pages_contacto_path,
-        caption: "Contacto",
-        estado: ""
-      },
-      {
-        direccion: static_pages_nosotros_path,
-        caption: "Nosotros",
-        estado: ""
-      },
-    ]
+        {
+          direccion: static_pages_noticias_path,
+          caption: "Noticias",
+          estado: ""
+        },
+        {
+          direccion: static_pages_cursos_path,
+          caption: "Cursos",
+          estado: ""
+        },
+        {
+          direccion: static_pages_tarifas_path,
+          caption: "Tarifas",
+          estado: ""
+        },
+        {
+          direccion: static_pages_contacto_path,
+          caption: "Contacto",
+          estado: ""
+        },
+        {
+          direccion: static_pages_nosotros_path,
+          caption: "Nosotros",
+          estado: ""
+        },
+      ]
+      if admin_signed_in?
+        @navegacion << {
+          direccion: posts_path,
+          caption: "Administrar noticias",
+          estado: ""
+        }
+      end
     end
 end

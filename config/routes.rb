@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   get 'static_pages/contacto'
   get 'static_pages/nosotros'
   post 'static_pages/contacto_create'
+  get 'static_pages/noticias'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

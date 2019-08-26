@@ -5,8 +5,9 @@
     %span.navbar-toggler-icon
   #navbarSupportedContent.collapse.navbar-collapse
     %ul.navbar-nav.ml-auto
-      - @navegacion.each do |navegacion|
-        %li{ class: "nav-item #{navegacion[:estado]}"}
-          = link_to navegacion[:direccion], class: "nav-link" do
-            = navegacion[:caption]
-            %span.sr-only
+      - unless @navegacion.nil?
+        - @navegacion.each do |navegacion|
+          %li{ class: "nav-item #{navegacion[:estado]}"}
+            = link_to navegacion[:direccion], class: "nav-link" do
+              = navegacion[:caption]
+              %span.sr-only
