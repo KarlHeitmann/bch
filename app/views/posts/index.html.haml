@@ -1,0 +1,25 @@
+.container
+  .row
+    .col
+      %h1 Lista de noticias
+
+      = paginate @posts
+      %table.table.table-striped.table-bordered.table-hover
+        %thead.thead-light
+          %tr
+            %th Titulo
+            %th Contenido
+            %th
+            %th
+            %th
+
+        %tbody
+          - @posts.each do |post|
+            %tr
+              %td= post.titulo
+              %td= post.contenido
+              %td= button_to 'Ver', post, class: 'btn btn-primary', method: :get
+              %td= button_to 'Editar', edit_post_path(post), class: 'btn btn-secondary', method: :get
+              %td= button_to 'Eliminar', post, method: :delete, data: { confirm: '¿Está seguro de eliminar?' }, class: 'btn btn-danger'
+
+      = button_to 'Nueva noticia', new_post_path, class: 'btn btn-primary', method: :get

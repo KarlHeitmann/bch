@@ -1,0 +1,11 @@
+.container
+  .row
+    .col-12
+      %h1.title Promociones
+      = paginate @posts
+    - @posts.each do |post|
+      .col-12.col-lg-6
+        .card
+          %h2.card-title= post.titulo
+          %p.card-text= post.contenido
+        %br

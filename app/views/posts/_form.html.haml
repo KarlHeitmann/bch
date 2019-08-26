@@ -1,0 +1,12 @@
+= simple_form_for @post do |f|
+  - if @post.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@post.errors.count, "error")} prohibited this post from being saved:"
+      %ul
+        - @post.errors.full_messages.each do |message|
+          %li= message
+
+  = f.input :titulo, label: 'Título', input_html: {class: "form-control"}, wrapper_html: { class: 'form-group' }, :required => true, placeholder: "Aquí va el título..."
+  = f.input :contenido, label: 'Contenido', input_html: {class: "form-control", rows: 10}, wrapper_html: { class: 'form-group' }, :required => true, placeholder: "Aquí va el contenido..."
+  .actions
+    = f.submit 'Guardar', class: 'btn btn-primary'
