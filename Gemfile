@@ -7,6 +7,8 @@ gem "haml-rails", "~> 2.0"
 
 gem 'devise'
 
+gem 'kaminari'
+
 gem 'mail_form'
 
 gem 'simple_form'

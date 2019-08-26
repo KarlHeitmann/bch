@@ -5,6 +5,7 @@ class StaticPagesController < ApplicationController
 
   def noticias
     @navegacion[0][:estado] = "active"
+    @posts = Post.order("updated_at desc").page params[:page]
   end
 
   def cursos
@@ -47,7 +48,7 @@ class StaticPagesController < ApplicationController
       @navegacion = [
         {
           direccion: static_pages_noticias_path,
-          caption: "Noticias",
+          caption: "",
           estado: ""
         },
         {
