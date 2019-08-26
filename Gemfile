@@ -5,6 +5,8 @@ ruby '2.6.3'
 
 gem "haml-rails", "~> 2.0"
 
+gem 'devise'
+
 gem 'mail_form'
 
 gem 'simple_form'
