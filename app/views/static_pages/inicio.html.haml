@@ -1,30 +1,33 @@
 .container-fluid
   = javascript_pack_tag 'hello_vue'
+  .row
+    .col
+      = generar_jumbotron
+
   .row.mt-0
     .col
       #carouselHero.carousel.slide{ data: { ride: "carousel" } }
         .carousel-inner
           .carousel-item.active
-            %img.img-fluid{ src: '/images/carrusel_deep_diver_diving_suit.jpg', alt: 'First slide' }
+            %img.img-fluid{ src: '/images/carrusel_deep_diver_diving_suit.jpg', alt: 'Hero slide' }
             .carousel-caption.d-none.d-md-block
               %h2.title
                 ¡La aventura está en
                 %strong Buceo Canelillo!
-              %p Certifícate con los cursos PADI
+              %p Únete al equipo para vivir nuevas aventuras
           .carousel-item
-            %img.img-fluid{ src: '/images/carrusel_actinia.png', alt: 'Actinia naranja' }
+            %img.img-fluid{ src: '/images/carrusel_naufragio.jpg', alt: 'Naufragio Algarrobo' }
             .carousel-caption.d-none.d-md-block
-              %h2.title
-                Ven a vivir una nueva experiencia
-              %p Personal certificado
+              %h2.title El naufragio de Algarrobo
+              %p Explora los restos de este navío a metros de la orilla.
 
           .carousel-item
             %img.d-block.w-100{ src: '/images/carrusel_jaiba.png', alt: 'Third slide' }
             .carousel-caption.d-none.d-md-block
               %h2.title
-                La fauna y flora marina te darán una experiencia fenomenal
-                %strong Canelillo
-              %p Certifícate con los cursos PADI
+                La fauna y flora marina te dejarán
+                %strong atónito
+              %p Descubre un mundo alienígena sin salir del planeta.
         %a.carousel-control-prev{ href: "#carouselHero", role: "button", data: { slide: "prev" } }
           %span.carousel-control-prev-icon{ aria: { hidden: "true" } }
           %span.sr-only Previous
@@ -34,6 +37,7 @@
   %br
   %br
   %br
+.container
   .row.mt-0
     .col-12.col-lg-6
       %h2.title
