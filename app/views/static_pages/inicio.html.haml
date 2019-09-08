@@ -42,8 +42,8 @@
   %br
   %br
 .container
-  .row.mt-0
-    .col-12.col-lg-6
+  .row.mt-0.align-items-center.h-100
+    .col-12.col-lg-4
       %h2.title
         ¡La aventura está en Buceo Canelillo!
       %p
@@ -53,8 +53,17 @@
         Desde simples peces de roca como Rollizos y Bilagay, hasta el legendario Tiburón Pintarroja y criters
         como los Nudibranchios.
 
-
     .col-12.col-lg-6
+      %img.img-fluid{ src: '/images/camaron_de_roca_5B.png', alt: 'camarón de roca' }
+    .col-12.col-lg-2
+
+  %br
+  .row.align-items-center.h-100
+    .col-12.col-lg-2
+    .col-12.col-lg-6
+      %img.img-fluid{ src: '/images/naufragio_algarrobo.jpg', alt: 'camarón de roca' }
+
+    .col-12.col-lg-4
       %h2.title
         El naufragio de Algarrobo
       / Colocar esto como una foto
@@ -62,8 +71,6 @@
         Los remanentes de un antiguo naufragio a solo metros de la orilla, nos proveen de una increíble y muy
         accesible experiencia para aquellos que recién empiezan en este deporte. Gracias a su baja profundidad
         cualquier persona puede descender y descubrir los restos de este navío.
-  %br
-  %br
   %br
   .row.align-items-center.h-100
     .col-12.col-lg-6
@@ -79,24 +86,27 @@
 
     .col-12.col-lg-6
       %img.img-fluid{:alt => "Buceando", :src => "/images/dive-diver-eyes-37545.jpg"}/
-  .content
-    %section
-      .container.flex
-        .text.editable
-          %h2
-            ¿Qué es el
-            = succeed "?" do
-              %strong Buceo
-          %p
-            Definir el Buceo es como definir cualquier otro termino. Todo depende del contexto y propósito detrás
-            de la pregunta. En nuestro caso, el buceo es una apertura a un nuevo, interesante y desconocido
-            mundo. Una oportunidad de explorar un mundo alienígena sin tener que salir del planeta, descubrir la
-            impresión de estar en gravedad cero, explorar nuevos lugares en los cuales nadie ha estado antes,
-            descubrir criaturas únicas que no se pueden ver en ningún otro lugar.
-            Para otros el Buceo puede ser un escape de su mundo, una forma de relajación y hay aquellos que ven el
-            buceo como un simple método de realizar su trabajo. Ya sea un buzo comercial realizando reparaciones
-            en el fondo del océano o un buzo científico realizando estudios.
-            Pero lo más importante, es que el buceo puede ser realizado por cualquier persona, no se requiere de
-            entrenamiento o habilidades especiales y lo único que te limita es tu propia motivación a la aventura.
-        .image
-          %img.img-fluid{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
+  %br
+  .row.align-items-center.h-100
+    .col-12.col-lg-1
+    .col-12.col-lg-7
+      %img.img-fluid{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
+    .col-12.col-lg-3
+      %h2
+        ¿Qué es el
+        = succeed "?" do
+          %strong Buceo
+      %p
+        Definir el Buceo es como definir cualquier otro termino. Todo depende del contexto y propósito detrás
+        de la pregunta. En nuestro caso, el buceo es una apertura a un nuevo, interesante y desconocido
+        mundo. Una oportunidad de explorar un mundo alienígena sin tener que salir del planeta, descubrir la
+        impresión de estar en gravedad cero, explorar nuevos lugares en los cuales nadie ha estado antes,
+        descubrir criaturas únicas que no se pueden ver en ningún otro lugar.
+        %br
+        Para otros el Buceo puede ser un escape de su mundo, una forma de relajación y hay aquellos que ven el
+        buceo como un simple método de realizar su trabajo. Ya sea un buzo comercial realizando reparaciones
+        en el fondo del océano o un buzo científico realizando estudios.
+        %br
+        Pero lo más importante, es que el buceo puede ser realizado por cualquier persona, no se requiere de
+        entrenamiento o habilidades especiales y lo único que te limita es tu propia motivación a la aventura.
+    .col-12.col-lg-1
