@@ -1,18 +1,21 @@
 .container-fluid
-  = javascript_pack_tag 'hello_vue'
+  =# javascript_pack_tag 'hello_vue'
   .row
     .col
-      = generar_jumbotron
+      =# generar_jumbotron
 
   .row.mt-0
-    .col
+    .col-1
+    .col-10
       #carouselHero.carousel.slide{ data: { ride: "carousel" } }
         .carousel-inner
           .carousel-item.active
             %img.img-fluid{ src: '/images/carrusel_deep_diver_diving_suit.jpg', alt: 'Hero slide' }
             .carousel-caption.d-none.d-md-block
-              %h2.title
+              %h1.title.titulo-carrusel
                 ¡La aventura está en
+                //%br
+                /%br
                 %strong Buceo Canelillo!
               %p Únete al equipo para vivir nuevas aventuras
           .carousel-item
@@ -34,6 +37,7 @@
         %a.carousel-control-next{ href: "#carouselHero", role: "button", data: { slide: "next" } }
           %span.carousel-control-next-icon{ aria: { hidden: "true" } }
           %span.sr-only Next
+    .col-1
   %br
   %br
   %br

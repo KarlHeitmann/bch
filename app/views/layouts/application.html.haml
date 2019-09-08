@@ -23,5 +23,20 @@
     = yield
 
     %footer.mt-auto.py-3
-      .container.footer{ style: 'background: url("/images/footer_fondo.png") cover no-repeat center center'}
-        %span.text-muted Footer
+      / .container.footer{ style: 'background: url("/images/footer_fondo.png") cover no-repeat center center'}
+      .container.footer{ style: 'background: #349A8B'}
+        .row
+          .col-2
+            %img.img-fluid{ src: '/images/icon_padi.png', height: "150", alt: 'icono padi' }
+          .col-6
+          .col-1
+            %img.img-fluid{ src: '/images/icon_linkedin.png', height: "100", alt: 'icono padi' }
+          .col-1
+            %img.img-fluid{ src: '/images/icon_twitter.png', height: "100", alt: 'icono padi' }
+          .col-1
+            %img.img-fluid{ src: '/images/icon_instagram.png', height: "100", alt: 'icono padi' }
+          .col-1
+            %img.img-fluid{ src: '/images/icon_email.png', height: "100", alt: 'icono padi' }
+        .row
+          .col
+            / contacto@buceocanelillo.com

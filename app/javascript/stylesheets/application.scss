@@ -8,15 +8,26 @@
   left: auto !important;
   right: 0px;
 }
+.navbar-custom {
+  //background-color: rgba(0, 0, 0, 0.1) !important;
+  background-color: #349A8B !important;
+}
+
+a.nav-link {
+  color: white !important;
+
+}
 
 body {
   // font-size: 1.5em;
+  background-color: #349A8B;
+  color: white;
   font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
 
 }
 
 .carousel-caption {
-  top: 60px;
+  top: 80px;
   bottom: auto;
 }
 
@@ -34,9 +45,15 @@ a.panel-curso:hover {
     color: black;
 }
 
+/*
 .title {
+  font-size: 2.5em;
+}
+
+.subtitle {
   font-size: 1.5em;
 }
+*/
 
 .footer {
   //background: url('/public/images/fondo_footer.png');
