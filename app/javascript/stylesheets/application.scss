@@ -33,7 +33,7 @@ body {
 
 .anchor { padding-top: 90px; }
 
-a.panel-curso {
+a.panel-curso, a.enlace-normal {
     text-decoration: none;
 }
 a.panel-curso:link, a.panel-curso:visited {
@@ -43,6 +43,15 @@ a.panel-curso:link, a.panel-curso:visited {
 a.panel-curso:hover {
     //color: red;
     color: black;
+}
+
+a.enlace-normal:link, a.enlace-normal:visited {
+    //color: blue;
+    color: white;
+}
+a.enlace-normal:hover {
+    //color: red;
+    color: white;
 }
 
 .card {
@@ -66,3 +75,5 @@ a.panel-curso:hover {
   //background: url('/public/images/fondo_footer.png');
   //height: 400px;
 }
+
+#mapid { height: 370px; }

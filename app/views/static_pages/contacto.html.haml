@@ -10,12 +10,27 @@
           = f.hidden_field :nickname, :hint => 'Leave this field blank!'
         .form-actions
           =# f.button :submit, 'Enviar', type: 'button', class: "btn btn-primary"
-          = f.button :submit, 'Enviar', class: "btn btn-primary"
+          = f.button :submit, 'Enviar', class: "btn btn-secondary"
     .col-12.col-lg-6
-      %h3.editable Address
-      / <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
-      %address
-        %a{:href => "#", :target => "_blank"} Canelillo, Chile
       %h3.editable Email
       %p
-        %a{:href => "mailto:contacto@buceocanelillo.com"} contacto@buceocanelillo.com
+        %a.enlace-normal{:href => "mailto:contacto@buceocanelillo.com"} contacto@buceocanelillo.com
+      %h3.editable Dirección
+      / <address><a target="_blank" href="https://www.google.com/maps/place/{{ page.map.address | url_encode }}">{{ page.map.address | replace: ", ", ", <br>" }}</a></address>
+      %address
+        %a.enlace-normal{:href => "#", :target => "_blank"} Canelillo, Chile
+        #mapid
+
+:javascript
+  //var mymap = L.map('mapid').setView([51.505, -0.09], 13);
+  var mymap = L.map('mapid').setView([-33.04132974221493, -71.60778305174718], 13);
+  L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoiYnVjZW9jYW5lbGlsbG8iLCJhIjoiY2swYmxkd2ptMDAyZzNjcWpkZWlkNzd4YSJ9.5ViA7O8HtED69Docy9IFqQ', {
+  	attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+  	//maxZoom: 18,
+  	//maxZoom: 8,
+  	maxZoom: 58,
+  	id: 'mapbox.streets',
+  	accessToken: 'your.mapbox.access.token'
+  	//accessToken: 'pk.eyJ1IjoiYnVjZW9jYW5lbGlsbG8iLCJhIjoiY2swYmxkd2ptMDAyZzNjcWpkZWlkNzd4YSJ9.5ViA7O8HtED69Docy9IFqQ'
+  }).addTo(mymap);
+  var marker = L.marker([-33.04132974221493, -71.60778305174718]).addTo(mymap);
