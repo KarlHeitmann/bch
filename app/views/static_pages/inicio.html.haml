@@ -1,41 +1,49 @@
 .container-fluid
-  = javascript_pack_tag 'hello_vue'
-  .row.mt-0
+  =# javascript_pack_tag 'hello_vue'
+  .row
     .col
+      =# generar_jumbotron
+
+  .row.mt-0
+    .col-1
+    .col-10
       #carouselHero.carousel.slide{ data: { ride: "carousel" } }
         .carousel-inner
           .carousel-item.active
-            %img.img-fluid{ src: '/images/carrusel_deep_diver_diving_suit.jpg', alt: 'First slide' }
+            %img.img-fluid{ src: '/images/carrusel_deep_diver_diving_suit.jpg', alt: 'Hero slide' }
             .carousel-caption.d-none.d-md-block
-              %h2.title
+              %h1.title.titulo-carrusel
                 ¡La aventura está en
+                //%br
+                /%br
                 %strong Buceo Canelillo!
-              %p Certifícate con los cursos PADI
+              %p Únete al equipo para vivir nuevas aventuras
           .carousel-item
-            %img.img-fluid{ src: '/images/carrusel_actinia.png', alt: 'Actinia naranja' }
+            %img.img-fluid{ src: '/images/carrusel_naufragio.jpg', alt: 'Naufragio Algarrobo' }
             .carousel-caption.d-none.d-md-block
-              %h2.title
-                Ven a vivir una nueva experiencia
-              %p Personal certificado
+              %h2.title El naufragio de Algarrobo
+              %p Explora los restos de este navío a metros de la orilla.
 
           .carousel-item
             %img.d-block.w-100{ src: '/images/carrusel_jaiba.png', alt: 'Third slide' }
             .carousel-caption.d-none.d-md-block
               %h2.title
-                La fauna y flora marina te darán una experiencia fenomenal
-                %strong Canelillo
-              %p Certifícate con los cursos PADI
+                La fauna y flora marina te dejarán
+                %strong atónito
+              %p Descubre un mundo alienígena sin salir del planeta.
         %a.carousel-control-prev{ href: "#carouselHero", role: "button", data: { slide: "prev" } }
           %span.carousel-control-prev-icon{ aria: { hidden: "true" } }
           %span.sr-only Previous
         %a.carousel-control-next{ href: "#carouselHero", role: "button", data: { slide: "next" } }
           %span.carousel-control-next-icon{ aria: { hidden: "true" } }
           %span.sr-only Next
+    .col-1
   %br
   %br
   %br
-  .row.mt-0
-    .col-12.col-lg-6
+.container
+  .row.mt-0.align-items-center.h-100
+    .col-12.col-lg-4
       %h2.title
         ¡La aventura está en Buceo Canelillo!
       %p
@@ -45,8 +53,17 @@
         Desde simples peces de roca como Rollizos y Bilagay, hasta el legendario Tiburón Pintarroja y criters
         como los Nudibranchios.
 
-
     .col-12.col-lg-6
+      %img.img-fluid{ src: '/images/camaron_de_roca_5B.png', alt: 'camarón de roca' }
+    .col-12.col-lg-2
+
+  %br
+  .row.align-items-center.h-100
+    .col-12.col-lg-2
+    .col-12.col-lg-6
+      %img.img-fluid{ src: '/images/naufragio_algarrobo.jpg', alt: 'camarón de roca' }
+
+    .col-12.col-lg-4
       %h2.title
         El naufragio de Algarrobo
       / Colocar esto como una foto
@@ -54,8 +71,6 @@
         Los remanentes de un antiguo naufragio a solo metros de la orilla, nos proveen de una increíble y muy
         accesible experiencia para aquellos que recién empiezan en este deporte. Gracias a su baja profundidad
         cualquier persona puede descender y descubrir los restos de este navío.
-  %br
-  %br
   %br
   .row.align-items-center.h-100
     .col-12.col-lg-6
@@ -71,24 +86,27 @@
 
     .col-12.col-lg-6
       %img.img-fluid{:alt => "Buceando", :src => "/images/dive-diver-eyes-37545.jpg"}/
-  .content
-    %section
-      .container.flex
-        .text.editable
-          %h2
-            ¿Qué es el
-            = succeed "?" do
-              %strong Buceo
-          %p
-            Definir el Buceo es como definir cualquier otro termino. Todo depende del contexto y propósito detrás
-            de la pregunta. En nuestro caso, el buceo es una apertura a un nuevo, interesante y desconocido
-            mundo. Una oportunidad de explorar un mundo alienígena sin tener que salir del planeta, descubrir la
-            impresión de estar en gravedad cero, explorar nuevos lugares en los cuales nadie ha estado antes,
-            descubrir criaturas únicas que no se pueden ver en ningún otro lugar.
-            Para otros el Buceo puede ser un escape de su mundo, una forma de relajación y hay aquellos que ven el
-            buceo como un simple método de realizar su trabajo. Ya sea un buzo comercial realizando reparaciones
-            en el fondo del océano o un buzo científico realizando estudios.
-            Pero lo más importante, es que el buceo puede ser realizado por cualquier persona, no se requiere de
-            entrenamiento o habilidades especiales y lo único que te limita es tu propia motivación a la aventura.
-        .image
-          %img.img-fluid{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
+  %br
+  .row.align-items-center.h-100
+    .col-12.col-lg-1
+    .col-12.col-lg-7
+      %img.img-fluid{:alt => "que-es-buceo", :src => "/images/animals-corals-deep-68767.jpg"}/
+    .col-12.col-lg-3
+      %h2
+        ¿Qué es el
+        = succeed "?" do
+          %strong Buceo
+      %p
+        Definir el Buceo es como definir cualquier otro termino. Todo depende del contexto y propósito detrás
+        de la pregunta. En nuestro caso, el buceo es una apertura a un nuevo, interesante y desconocido
+        mundo. Una oportunidad de explorar un mundo alienígena sin tener que salir del planeta, descubrir la
+        impresión de estar en gravedad cero, explorar nuevos lugares en los cuales nadie ha estado antes,
+        descubrir criaturas únicas que no se pueden ver en ningún otro lugar.
+        %br
+        Para otros el Buceo puede ser un escape de su mundo, una forma de relajación y hay aquellos que ven el
+        buceo como un simple método de realizar su trabajo. Ya sea un buzo comercial realizando reparaciones
+        en el fondo del océano o un buzo científico realizando estudios.
+        %br
+        Pero lo más importante, es que el buceo puede ser realizado por cualquier persona, no se requiere de
+        entrenamiento o habilidades especiales y lo único que te limita es tu propia motivación a la aventura.
+    .col-12.col-lg-1
