@@ -1,5 +1,5 @@
 .container
-  .row
+  .row.align-items-center
     .col-12.col-lg-6
       .card
         .card-header
@@ -15,9 +15,14 @@
         .card-footer
           %ul.list-group.list-group-flush
             %li.list-group-item
-              Valor: 40.000 por persona
+              Valor: $ 40.000 por persona
             %li.list-group-item
               Edad mínima: 10 años
+    .col-12.col-lg-6
+      %img.img-fluid{:alt => "Padi open water", :src => "/images/scuba-diver.jpg"}/
+
+  %br
+  .row.align-items-center
     .col-12.col-lg-6
       .card
         .card-header
@@ -38,10 +43,9 @@
         .card-footer
           %ul.list-group.list-group-flush
             %li.list-group-item
-              Valor: 273.000
+              Valor: $ 273.000
             %li.list-group-item
               Edad Mínima: 10 años (niños menores de 15 años se certifican como Junior Open Water)
-  .row
     .col-12.col-lg-6
       .card
         .card-header
@@ -61,9 +65,12 @@
         .card-footer
           %ul.list-group.list-group-flush
             %li.list-group-item
-              Valor: A DETERMINAR
+              Valor: $ 250.000
             %li.list-group-item
               Edad Minima: 12 años
+  %br
+  /.row.align-items-center
+  .row
     .col-12.col-lg-6
       .card
         .card-header
@@ -94,14 +101,15 @@
         .card-footer
           %ul.list-group.list-group-flush
             %li.list-group-item
-              Valor: A determinar
+              Valor: $ 250.000
             %li.list-group-item
               Edad mínima: 12 años
             %li.list-group-item
               /Destacar esto
-              %span
-                Se requiere: Emergency First Response Primary and Secondary Care (RCP y Primeros Auxilios)
-  .row
+              Requisitos:
+              %ul
+                %li
+                  Emergency First Response Primary and Secondary Care (RCP y Primeros Auxilios)
     .col-12.col-lg-6
       .card
         .card-header
@@ -118,14 +126,22 @@
             tanto en el agua como en tierra.
             %br
             Terminaras siendo parte de un grupo de profesionales en la asociación de buceo más grande del mundo.
+            %br
         .card-footer
           %ul.list-group.list-group-flush
             %li.list-group-item
-              Valor: A determinar
+              Valor: $ 600.000
             %li.list-group-item
               Edad Mínima: 18 años
             %li.list-group-item
               /Destacar
-              %span
-                Se requiere: Emergency First Response Primary and Secondary Care (RCP y Primeros Auxilios), revisión
-                médica y 40 buceos para empezar y 60 para finalizar.
+              Requisitos:
+              %ul
+                %li
+                  Emergency First Response Primary and Secondary Care (RCP y Primeros Auxilios)
+                %li
+                  Revisión médica
+                %li
+                  40 buceos para empezar
+                %li
+                  60 para finalizar.
