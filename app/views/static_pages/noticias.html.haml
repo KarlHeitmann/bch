@@ -3,9 +3,13 @@
     .col-12
       %h1.title Promociones
       = paginate @posts
-    - @posts.each do |post|
-      .col-12.col-lg-6
-        .card
-          %h2.card-title= post.titulo
-          %p.card-text= post.contenido
-        %br
+  - @posts.each_slice(2) do |postes|
+    %br
+    .row
+      - postes.each do |post|
+        .col-12.col-lg-6
+          .card
+            .card-header
+              .card-title= post.titulo
+            .card-body
+              %p=post.contenido.gsub('\n', '<br>').html_safe
