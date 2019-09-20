@@ -10,18 +10,18 @@
 }
 .navbar-custom {
   //background-color: rgba(0, 0, 0, 0.1) !important;
-  background-color: #349A8B !important;
+  background-color: white !important;
 }
 
 a.nav-link {
-  color: white !important;
+  color: black !important;
 
 }
 
 body {
   // font-size: 1.5em;
-  background-color: #349A8B;
-  color: white;
+  background-color: white;
+  color: black;
   font-family: "San Francisco", "Helvetica Neue", "Helvetica", "Arial";
 
 }
@@ -47,11 +47,11 @@ a.panel-curso:hover {
 
 a.enlace-normal:link, a.enlace-normal:visited {
     //color: blue;
-    color: white;
+    color: black;
 }
 a.enlace-normal:hover {
     //color: red;
-    color: white;
+    color: black;
 }
 
 .card {
